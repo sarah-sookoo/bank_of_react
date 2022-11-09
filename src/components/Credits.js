@@ -40,7 +40,7 @@ class Credits extends Component {
     return (
       <div>
         <h1> Credits </h1>
-        <AccountBalance accountBalance={this.props.accountBalance} />
+        <AccountBalance accountBalance={this.props.accountBalance}/>
         {/* <AccountBalance accountBalance={this.state.accountBalance}/> */}
         <br></br>
 
