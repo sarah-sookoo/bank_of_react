@@ -34,7 +34,7 @@ class Debit extends Component {
     newDebits.unshift(newDebit);
     this.setState({
       debits: newDebits,
-      accountBalance: parseFloat(this.state.accountBalance) - parseFloat(amount),
+      accountBalance: parseFloat(this.props.accountBalance) - parseFloat(amount),
     })
   }
 
@@ -42,13 +42,13 @@ class Debit extends Component {
     return (
       <div>
         <h1> Debits </h1>
-        <h3><AccountBalance accountBalance={this.state.accountBalance} /></h3>
+        <h3><AccountBalance accountBalance={this.props.accountBalance} /></h3>
 
         <label htmlFor="description">Enter Debit: </label>
         <input type="text" id="description" name="description"></input><br />
         <label htmlFor="amount">Amount: </label>
         <input type="text" id="amount" name="amount"></input><br />
-        <button onClick={this.newDebit}>Submit</button>
+        <button onClick={this.newDebit}>Add Debit</button>
         <br></br>
 
         {this.state.debits.map((list) => (
